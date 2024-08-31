@@ -1,2 +1,12 @@
 
-https://www.notion.so/Architecture-Diagram-b78bf0de2b584c65a801e59ee6fee299?pvs=4#63ae548f44f34dceb3b6413d72a95f9b
+User submits form ----> 2. API Gateway ----> 3. PII Masking & Detection
+                                                         | |
+                                                         v v
+                                                Secure UI Threshold Checker
+                                                          |
+                                                          v
+                                                Trigger Actions (Email, Log)
+                                                          |
+                                                          v
+                                                   Encrypted Database
+
