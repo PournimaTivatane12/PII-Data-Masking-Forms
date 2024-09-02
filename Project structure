@@ -1,0 +1,9 @@
+psf-pii-masking-forms/
+│
+├── app.py  # Main application file
+├── templates/
+│   └── form.html  # HTML form for data input
+├── static/
+│   └── styles.css  # CSS file for styling (optional)
+├── venv/  # Virtual environment
+└── requirements.txt  # Dependencies list
