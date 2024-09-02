@@ -1,0 +1,22 @@
+THRESHOLD = 10
+
+@app.route('/submit', methods=['POST'])
+def submit():
+    data = request.form
+    pii_count = 0
+    masked_data = {}
+
+    for field, value in data.items():
+        response = analyzer.analyze(text=value, language='en')
+        if response:
+            pii_count += 1
+            masked_value = anonymizer.anonymize(text=value, analyzer_results=response)
+            masked_data[field] = masked_value
+        else:
+            masked_data[field] = value
+
+    if pii_count > THRESHOLD:
+        # Trigger an alert (e.g., log, email notification)
+        return "Threshold exceeded! Too many PII entries."
+
+    return masked_data
