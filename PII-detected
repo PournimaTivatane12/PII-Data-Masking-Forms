@@ -1,0 +1,15 @@
+from presidio_analyzer import AnalyzerEngine
+
+analyzer = AnalyzerEngine()
+
+@app.route('/submit', methods=['POST'])
+def submit():
+    data = request.form
+    pii_data = {}
+    for field, value in data.items():
+        response = analyzer.analyze(text=value, language='en')
+        if response:
+            pii_data[field] = value  # Detected PII
+
+    # Next step: Mask detected PII
+    return pii_data
