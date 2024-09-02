@@ -1,0 +1,18 @@
+from presidio_anonymizer import AnonymizerEngine
+
+anonymizer = AnonymizerEngine()
+
+@app.route('/submit', methods=['POST'])
+def submit():
+    data = request.form
+    masked_data = {}
+    for field, value in data.items():
+        response = analyzer.analyze(text=value, language='en')
+        if response:
+            # Mask the PII
+            masked_value = anonymizer.anonymize(text=value, analyzer_results=response)
+            masked_data[field] = masked_value
+        else:
+            masked_data[field] = value  # No PII detected, retain original value
+
+    return masked_data
