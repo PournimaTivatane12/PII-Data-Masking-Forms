@@ -1,0 +1,20 @@
+from flask import Flask, request, jsonify
+
+app = Flask(__name__)
+
+def mask_email(email):
+    """Mask email addresses."""
+    parts = email.split('@')
+    if len(parts) == 2:
+        return f"{parts[0][:2]}****@{parts[1]}"
+    return email
+
+@app.route('/submit', methods=['POST'])
+def submit():
+    data = request.json
+    if 'email' in data:
+        data['email'] = mask_email(data['email'])
+    return jsonify(data)
+
+if __name__ == '__main__':
+    app.run(debug=True)
