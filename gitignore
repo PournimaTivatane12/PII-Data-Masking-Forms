@@ -1,0 +1,65 @@
+# Node.js related
+node_modules/
+npm-debug.log*
+
+# Logs
+logs/
+*.log
+*.log.*
+
+# dotenv environment variable file
+.env
+
+# Dependency directories
+bower_components/
+jspm_packages/
+
+# Build output
+dist/
+build/
+
+# IDE and editor files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# MacOS system files
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+
+# Backup files
+*.bak
+*.swp
+
+# Local test database
+*.sqlite3
+
+# Coverage reports
+coverage/
+.nyc_output/
+
+# Docker related
+docker-compose.override.yml
+.dockerignore
+
+# Any secrets or keys (just in case)
+*.key
+*.pem
+
+# Temporary files
+*.tmp
+*.temp
+
+# Debugger files
+*.stackdump
+
+# Environment specific files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
