@@ -1,0 +1,68 @@
+Before installation, make sure you have the following:
+
+1. Python 3.x installed on your system.
+2. pip (Python package installer) installed.
+3. Git installed for cloning the repository.
+4. A code editor such as VSCode, Sublime Text, or PyCharm.
+
+Step 1: Clone the Repository
+Open your terminal (Command Prompt, Git Bash, or equivalent) and run the following command to clone the repository:
+
+git clone https://github.com/PournimaTivatane12/PII-Data-Masking-Forms.git
+
+Change into the project directory:
+cd PII-Data-Masking-Forms
+
+Step 2: Create a Virtual Environment
+It is recommended to use a virtual environment to manage dependencies. You can create one by running the following commands:
+
+python -m venv venv
+
+Activate the virtual environment:
+
+Windows:
+venv\Scripts\activate
+
+macOS/Linux:
+source venv/bin/activate
+
+Step 4: Configure Environment Variables
+If your application uses environment variables for sensitive data (e.g., API keys, thresholds), create a .env file in the root directory of the project:
+
+
+touch .env
+Inside the .env file, define any necessary variables. Example:
+
+
+MASKING_THRESHOLD=10
+Step 5: Run the Application
+Once everything is set up, you can run the application locally using:
+
+
+python app.py
+
+Alternatively, if you have a different entry point for the application, adjust the command to fit the appropriate filename.
+
+Step 6: Access the Application
+Open your web browser and navigate to:
+
+http://localhost:5000
+
+(or whatever port your application is configured to run on) to view the PII Data Masking Forms.
+
+Step 7: Deploy (Optional)
+You can deploy the application to platforms like Glitch, Heroku, Cyclic, or any cloud service of your choice. Follow the deployment instructions of the respective platform.
+
+Additional Notes:
+
+Update the README.md in the repository with any changes to the installation process.
+Regularly push updates to GitHub to keep your code up to date.
+
+
+
+
+
+
+
+
+
