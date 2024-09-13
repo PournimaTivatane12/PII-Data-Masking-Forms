@@ -136,7 +136,7 @@ How to Contribute
 Fork the Repository: Click the "Fork" button at the top of this page to create your own copy of the repository.
 Clone Your Fork: Clone your forked repository to your local machine.
 
-git clone https://github.com/your-username/PII-Data-Masking-Forms.git
+git clone https://github.com/PournimaTivatane12/PII-Data-Masking-Forms
 Create a New Branch: Create a new branch for your contribution.
 
 git checkout -b feature/your-feature-name
