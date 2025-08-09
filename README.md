@@ -1,5 +1,6 @@
 # PII-Data-Masking-Forms
 <img width="1435" height="1076" alt="image" src="https://github.com/user-attachments/assets/d0d674c2-0fec-4309-b82f-e4eb2bed3d64" />
+<img width="1820" height="390" alt="image" src="https://github.com/user-attachments/assets/9d415b3c-ea44-4ee6-aec9-9cef40f68f92" />
 
 **This system aims to protect sensitive information such as names, addresses, phone numbers, and other identifiable data by applying masking techniques in real-time.
 The project also includes a dynamic threshold feature that triggers alerts or actions when the number of detected PII entries exceeds a predefined limit.**
